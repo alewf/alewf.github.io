@@ -107,9 +107,14 @@ footer {
 
 .photo-container {
     text-align: center;
+    width: 300px; /* Adjust to your needs */
+    height: 200px; /* Adjust to your needs */
+    overflow: hidden; /* Hides any cropped parts if using 'cover' */
 }
 
 .photo-container img {
-    width: fit-content;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain, see options below */
     border: 4px solid black;
 }
