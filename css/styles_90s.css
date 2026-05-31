@@ -110,7 +110,6 @@ footer {
 }
 
 .photo-container img {
-    width: 600px;
-    max-width: fit-content;
+    width: fit-content;
     border: 4px solid black;
 }
