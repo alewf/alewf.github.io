@@ -303,11 +303,10 @@ main {
 .polaroid {
     position: absolute;
     float: left;
-    width: min(200px, 80vw);
+    width: min(180px, 80vw);
     margin: 20px;
     background: white;
     padding: 10px 10px 30px;
-    width: 180px;
     box-shadow: 4px 4px 0 black;
     transform: rotate(-8deg);
 }
