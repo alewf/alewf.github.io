@@ -198,3 +198,89 @@ footer {
     display: block;
     margin: 8px 0;
 }
+
+body {
+    background: #fff8dc;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    font-family: "Comic Sans MS", cursive;
+}
+
+main {
+    width: 60%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* All stickers */
+.sticker {
+    position: absolute;
+}
+
+.sticker img {
+    width: 80px;
+}
+
+/* Individual positions */
+
+.sticker1 {
+    top: 40px;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.sticker2 {
+    top: 200px;
+    right: 15%;
+    transform: rotate(15deg);
+}
+
+.sticker3 {
+    bottom: 120px;
+    left: 20%;
+    transform: rotate(-10deg);
+}
+
+.sticker4 {
+    bottom: 50px;
+    right: 10%;
+    transform: rotate(25deg);
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px) rotate(-10deg); }
+    50%  { transform: translateY(-10px) rotate(-8deg); }
+    100% { transform: translateY(0px) rotate(-10deg); }
+}
+
+.sticker img {
+    width: 80px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.sticker2 img {
+    animation-duration: 5s;
+}
+
+.sticker3 img {
+    animation-duration: 3s;
+}
+
+.polaroid {
+    position: absolute;
+    background: white;
+    padding: 10px 10px 30px;
+    width: 180px;
+    box-shadow: 4px 4px 0 black;
+    transform: rotate(-8deg);
+}
+
+.polaroid img {
+    width: 100%;
+}
+
+.polaroid p {
+    text-align: center;
+    margin: 10px 0 0;
+}
