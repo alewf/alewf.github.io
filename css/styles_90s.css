@@ -302,7 +302,7 @@ main {
 
 .polaroid {
     position: absolute;
-    float: right;
+    float: left;
     width: 200px;
     margin: 20px;
     background: white;
