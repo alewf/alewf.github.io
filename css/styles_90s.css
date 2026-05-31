@@ -1,4 +1,9 @@
 /* 90s Internet Style */
+@media (max-width: 768px) {
+    .polaroid {
+        display: none;
+    }
+}
 
 body {
     background-color: #dcfff5;
