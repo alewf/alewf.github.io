@@ -289,3 +289,23 @@ main {
     text-align: center;
     margin: 10px 0 0;
 }
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Keeps the container the same size as the image */
+}
+
+.base-img {
+  display: block;
+  width: 100%; /* Or set a specific size */
+  height: auto;
+}
+
+.overlay-img {
+  position: absolute;
+  top: 20px;       /* Distance from the top edge */
+  left: 20px;      /* Distance from the left edge */
+  z-index: 10;     /* Ensures it stays on top of the base image */
+  width: 50px;     /* Size of your overlay image */
+}
+
