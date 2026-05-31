@@ -253,6 +253,17 @@ main {
     transform: rotate(25deg);
 }
 
+.sticker5 {
+    bottom: 40px;
+    left: 10%;
+    transform: rotate(-10deg);
+}
+
+.sticker6 {
+    bottom: 80px;
+    right: 20%;
+    transform: rotate(25deg);
+}
 @keyframes float {
     0%   { transform: translateY(0px) rotate(-10deg); }
     50%  { transform: translateY(-10px) rotate(-8deg); }
