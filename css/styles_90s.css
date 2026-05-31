@@ -314,9 +314,9 @@ body {
 }
 
 .polaroid {
-    position: absolute;
+/*    position: absolute; */
     float: left;
-    width: clamp(100px, 5vw, 250px);
+    width: clamp(50px, 5vw, 250px);
     /* width: min(100px, 5vw); */
     /* width: 180px; */
     margin: 20px;
