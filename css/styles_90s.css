@@ -303,7 +303,7 @@ body {
 .polaroid {
     position: absolute;
     float: left;
-    width: clamp(150px, 25vw, 250px);
+    width: clamp(150px, 5vw, 250px);
     /* width: min(180px, 80vw); */
     margin: 20px;
     background: white;
