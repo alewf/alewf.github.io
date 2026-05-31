@@ -254,13 +254,11 @@ main {
 }
 
 .sticker5 {
-    bottom: 40px;
     left: 10%;
     transform: rotate(-10deg);
 }
 
 .sticker6 {
-    bottom: 80px;
     right: 20%;
     transform: rotate(25deg);
 }
@@ -309,7 +307,7 @@ main {
 
 .base-img {
   display: block;
-  width: 75%; /* Or set a specific size */
+  width: 100%; /* Or set a specific size */
   height: auto;
 }
 
