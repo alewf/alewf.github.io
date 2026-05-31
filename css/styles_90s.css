@@ -171,9 +171,14 @@ footer {
 .emoji-list input {
     display: none;
 }
-
+/*
 .emoji-list label::before {
     content: "🌱 ";
+    font-size: 1.2em;
+}
+*/
+.emoji-list label::before {
+    content: "⭐ ";
     font-size: 1.2em;
 }
 
