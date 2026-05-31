@@ -1,6 +1,6 @@
 /* 90s Internet Style */
 @media (max-width: 768px) {
-    .polaroid {
+    .polaroid p{
         display: none;
     }
 }
@@ -315,9 +315,9 @@ body {
 .polaroid {
     position: absolute;
     float: left;
-    /* width: clamp(150px, 5vw, 250px); */
+    width: clamp(100px, 5vw, 250px);
     /* width: min(100px, 5vw); */
-    width: 180px;
+    /* width: 180px; */
     margin: 20px;
     background: white;
     padding: 10px 10px 30px;
