@@ -107,8 +107,8 @@ footer {
 
 .photo-container {
     text-align: center;
-    width: 300px; /* Adjust to your needs */
-    height: 200px; /* Adjust to your needs */
+    width: 800px; /* Adjust to your needs */
+    height: 800px; /* Adjust to your needs */
     overflow: hidden; /* Hides any cropped parts if using 'cover' */
 }
 
