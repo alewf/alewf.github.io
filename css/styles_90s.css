@@ -252,25 +252,29 @@ body {
 /* Individual positions */
 
 .sticker1 {
-    top: 40px;
+   /* top: 40px; */
+    top: 10%;
     left: 10%;
     transform: rotate(-20deg);
 }
 
 .sticker2 {
-    top: 200px;
+ /*   top: 200px;  */
+    top: 30%;
     right: 15%;
     transform: rotate(15deg);
 }
 
 .sticker3 {
-    bottom: 120px;
+   /* bottom: 120px; */
+    top: 80%;
     left: 20%;
     transform: rotate(-10deg);
 }
 
 .sticker4 {
-    bottom: 50px;
+  /*  bottom: 50px; */
+    top: 95%;
     right: 10%;
     transform: rotate(25deg);
 }
