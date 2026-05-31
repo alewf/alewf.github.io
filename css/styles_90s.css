@@ -302,6 +302,9 @@ main {
 
 .polaroid {
     position: absolute;
+    float: right;
+    width: 200px;
+    margin: 20px;
     background: white;
     padding: 10px 10px 30px;
     width: 180px;
