@@ -13,7 +13,7 @@ main {
     background-color: #ffffff;
     border: 3px ridge #808080;
     padding: 20px;
-    max-width: 800px;
+   /* max-width: 800px; */
     margin: 50px auto;
     /*
     margin-top: 50px;
@@ -306,8 +306,8 @@ body {
 .polaroid {
     position: absolute;
     float: left;
-    width: clamp(150px, 5vw, 250px);
-    /* width: min(180px, 80vw); */
+    /* width: clamp(150px, 5vw, 250px); */
+    width: min(100px, 5vw);
     margin: 20px;
     background: white;
     padding: 10px 10px 30px;
