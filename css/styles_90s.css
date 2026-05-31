@@ -103,3 +103,14 @@ footer {
         opacity: 0;
     }
 }
+
+
+.photo-container {
+    text-align: center;
+}
+
+.photo-container img {
+    width: 600px;
+    max-width: 100%;
+    border: 4px solid black;
+}
