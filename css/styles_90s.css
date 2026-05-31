@@ -234,6 +234,7 @@ main {
 /* All stickers */
 .sticker {
     position: absolute;
+    pointer-events: none;
 }
 
 .sticker img {
