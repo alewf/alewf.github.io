@@ -309,7 +309,7 @@ main {
 
 .base-img {
   display: block;
-  width: 100%; /* Or set a specific size */
+  width: 75%; /* Or set a specific size */
   height: auto;
 }
 
