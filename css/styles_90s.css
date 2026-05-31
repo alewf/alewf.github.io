@@ -274,8 +274,8 @@ main {
 }
 
 .sticker6 {
-    top: 10%;
-    left: 80%;
+    top: 40%;
+    right: 80%;
     transform: rotate(-42deg);
     z-index: 2;
 }
