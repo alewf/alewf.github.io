@@ -151,8 +151,8 @@ footer {
 }
 
 .pixel-tasks {
-    background: #62cf0e;
-    color: #8427f5;
+    background: #8427f5;
+    color: lime;
     padding: 20px;
     font-family: monospace;
     border: 4px solid lime;
