@@ -11,6 +11,10 @@ body {
     font-family: "Courier New", cursive;
     margin: 0;
     padding: 20px;
+    
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
 }
 
 /* Main content box */
