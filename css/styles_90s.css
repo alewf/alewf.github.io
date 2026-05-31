@@ -267,13 +267,17 @@ main {
 }
 
 .sticker5 {
-    left: 10%;
-    transform: rotate(-10deg);
+    top: 60%;
+    left: 70%;
+    transform: rotate(37deg);
+    z-index: 5;
 }
 
 .sticker6 {
-    right: 20%;
-    transform: rotate(25deg);
+    top: 10%;
+    left: 80%;
+    transform: rotate(-42deg);
+    z-index: 2;
 }
 
 @keyframes float {
