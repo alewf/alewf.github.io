@@ -113,6 +113,10 @@ footer {
     margin-top: 30px;
 }
 
+.mark {
+  background-color: #FFF44F; /* Highlight background */
+  color: #000000;            /* Highlighted text color */
+}
 /* Blink effect */
 .blink {
     animation: blink 2s step-start infinite;
