@@ -188,10 +188,14 @@ footer {
     margin: auto;
 }
 
-/*
 .left-polaroid {
     position: absolute;
     left: -250px;
     top: 100px;
 }
-*/
+
+.right-polaroid {
+    position: absolute;
+    right: -250px;
+    top: 250px;
+}
