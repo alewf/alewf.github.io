@@ -166,9 +166,9 @@ footer {
     animation-duration: 3s;
 }
 
-.leftpolaroid {
+.polaroid {
     position: absolute;
-    float: left;
+/*    float: left; */
     width: clamp(50px, 5vw, 250px);
     /* width: min(100px, 5vw); */
     /* width: 180px; */
@@ -179,33 +179,11 @@ footer {
     transform: rotate(-8deg);
 }
 
-.leftpolaroid img {
+.polaroid img {
     width: 100%;
 }
 
-.leftpolaroid p {
-    text-align: center;
-    margin: auto;
-}
-
-.rightpolaroid {
-    position: absolute;
-    float: right;
-    width: clamp(50px, 5vw, 250px);
-    /* width: min(100px, 5vw); */
-    /* width: 180px; */
-    margin: 20px;
-    background: white;
-    padding: 10px 10px 30px;
-    box-shadow: 4px 4px 0 black;
-    transform: rotate(-8deg);
-}
-
-.rightpolaroid img {
-    width: 100%;
-}
-
-.rightpolaroid p {
+.polaroid p {
     text-align: center;
     margin: auto;
 }
