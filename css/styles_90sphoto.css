@@ -195,6 +195,21 @@ footer {
     margin: auto;
 }
 
+.polaroid1 {
+    top: 50%;
+    right: 90%;
+    transform: rotate(-8deg);
+    z-index: 5;
+}
+
+.polaroid2 {
+    top: 90%;
+    right: 5%;
+    transform: rotate(8deg);
+    z-index: 5;
+}
+
+/*
 .left-polaroid {
     float: left
     margin: 0 20px 20px 0;
@@ -206,6 +221,7 @@ footer {
     margin: 0 20px 20px 0;
     transform: rotate(8deg);
 }
+*/
 
 /*
 .left-polaroid {
