@@ -141,7 +141,7 @@ body{
 }
 
 .console-nav h2{
-    color:#5de1ff;
+    color:var(--text2);
     margin-bottom:30px;
 }
 
