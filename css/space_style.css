@@ -235,7 +235,7 @@ body{
     #8cf6ff,
     #006d8f);
 
-    box-shadow:0 0 40px #29c7ff;
+    box-shadow:0 0 40px var(--accent-glow);
 }
 
 .orbit{
@@ -256,7 +256,7 @@ body{
 }
 
 .telemetry div{
-    background:#091625;
+    background:var(--panel);
     padding:15px;
     border-radius:10px;
 }
@@ -298,14 +298,14 @@ body{
 }
 
 .log-entry h2{
-    color:#8fdfff;
+    color:var(--heading);
     margin-bottom:15px;
 }
 
 blockquote{
     margin-top:20px;
     padding:15px;
-    border-left:4px solid #41bfff;
+    border-left:4px solid var(--accent);
     background:rgba(65,191,255,.08);
 }
 
@@ -417,7 +417,7 @@ blockquote{
 }
 
 .log-entry h2 {
-    color: #8fdfff;
+    color: var(--heading);
     margin-bottom: 1rem;
 }
 
