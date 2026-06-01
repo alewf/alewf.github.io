@@ -71,3 +71,98 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+/* All stickers */
+.sticker {
+    position: absolute;
+    pointer-events: none;
+}
+
+.sticker img {
+    width: 80px;
+}
+
+/* Individual positions */
+
+.sticker1 {
+   /* top: 40px; */
+    top: 5%;
+    left: 7%;
+    transform: rotate(-20deg);
+}
+
+.sticker2 {
+ /*   top: 200px;  */
+    top: 30%;
+    right: 15%;
+    transform: rotate(15deg);
+}
+
+.sticker3 {
+   /* bottom: 120px; */
+    top: 80%;
+    left: 20%;
+    transform: rotate(-10deg);
+}
+
+.sticker4 {
+  /*  bottom: 50px; */
+    top: 95%;
+    right: 10%;
+    transform: rotate(25deg);
+}
+
+.sticker5 {
+    top: 60%;
+    left: 70%;
+    transform: rotate(37deg);
+    z-index: 5;
+}
+
+.sticker6 {
+    top: 40%;
+    right: 80%;
+    transform: rotate(-42deg);
+    z-index: 2;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0px) rotate(-10deg); }
+    50%  { transform: translateY(-10px) rotate(-8deg); }
+    100% { transform: translateY(0px) rotate(-10deg); }
+}
+
+.sticker img {
+    width: 80px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.sticker2 img {
+    animation-duration: 5s;
+}
+
+.sticker3 img {
+    animation-duration: 3s;
+}
+
+.polaroid {
+/*    position: absolute; */
+    float: left;
+    width: clamp(50px, 5vw, 250px);
+    /* width: min(100px, 5vw); */
+    /* width: 180px; */
+    margin: 20px;
+    background: white;
+    padding: 10px 10px 30px;
+    box-shadow: 4px 4px 0 black;
+    transform: rotate(-8deg);
+}
+
+.polaroid img {
+    width: 100%;
+}
+
+.polaroid p {
+    text-align: center;
+    margin: auto;
+}
