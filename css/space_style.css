@@ -308,6 +308,10 @@ body{
     margin-bottom:15px;
 }
 
+.log-entry a:link{
+    color: #74cfff;
+}
+
 blockquote{
     margin-top:20px;
     padding:15px;
