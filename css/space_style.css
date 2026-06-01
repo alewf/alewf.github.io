@@ -315,7 +315,7 @@ a:link{
 blockquote{
     margin-top:20px;
     padding:15px;
-    border-left:4px solid var(--accent);
+  /*  border-left:4px solid var(--accent); */
     background:rgba(65,191,255,.08);
 }
 
