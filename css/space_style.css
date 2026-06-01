@@ -4,9 +4,44 @@
     box-sizing:border-box;
 }
 
+:root{
+    --bg:#030712;
+    --panel:#091625;
+    --panel2:#06111f;
+
+    --text:#d8f2ff;
+    --heading:#8fdfff;
+
+    --accent:#41bfff;
+    --accent-glow:#29c7ff;
+
+    --border:#16496e;
+
+    --success:#3cff88;
+}
+
+body.terminal-mode{
+
+    --bg:#000000;
+    --panel:#010701;
+    --panel2:#000000;
+
+    --text:#8cff8c;
+    --heading:#7fff7f;
+
+    --accent:#00ff66;
+    --accent-glow:#00ff66;
+
+    --border:#00aa44;
+
+    --success:#00ff66;
+
+    font-family: "Courier New", monospace;
+}
+
 body{
-    background:#030712;
-    color:#d8f2ff;
+    background:var(--bg);
+    color:var(--text);
     font-family:Segoe UI,sans-serif;
     display:flex;
     overflow-x:hidden;
@@ -94,8 +129,8 @@ body{
 .console-nav{
     width:260px;
     min-height:100vh;
-    background:#06111f;
-    border-right:1px solid #16496e;
+    background:var(--panel2);
+    border-right:1px solid var(--border);
     padding:30px;
     position:sticky;
     top:0;
@@ -150,11 +185,11 @@ body{
 
 .hero h1{
     font-size:4rem;
-    color:#8ddfff;
+    color:var(--heading);
 
     text-shadow:
-    0 0 10px #41bfff,
-    0 0 30px #41bfff;
+    0 0 10px var(--accent),
+    0 0 30px var(--accent);
 }
 
 .mission-id{
@@ -175,7 +210,7 @@ body{
 
 .panel{
     background:rgba(10,20,40,.85);
-    border:1px solid #16496e;
+    border:1px solid var(--border);
     border-radius:15px;
     padding:20px;
 }
@@ -279,8 +314,8 @@ blockquote{
     display:inline-block;
     padding:8px 14px;
 
-    border:1px solid #3cff88;
-    color:#3cff88;
+    border:1px solid var(--success);
+    color:var(--success);
     border-radius:999px;
 }
 
@@ -448,5 +483,34 @@ blockquote {
 
     .log-entry {
         padding: 1.5rem;
+    }
+}
+
+body.terminal-mode::before{
+
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(0,255,0,.03) 3px
+    );
+
+    pointer-events:none;
+    z-index:9999;
+}
+
+body.terminal-mode .hero h1::after{
+    content:"_";
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
     }
 }
