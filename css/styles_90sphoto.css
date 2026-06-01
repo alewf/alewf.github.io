@@ -188,6 +188,19 @@ footer {
 }
 
 .left-polaroid {
+    float: left
+    margin: 0 20px 20px 0;
+    transform: rotate(-8deg);
+}
+
+.right-polaroid {
+    float: right
+    margin: 0 20px 20px 0;
+    transform: rotate(8deg);
+}
+
+/*
+.left-polaroid {
     position: absolute;
     left: -250px;
     top: 100px;
@@ -200,3 +213,4 @@ footer {
     top: 250px;
     transform: rotate(8deg);
 }
+*/
