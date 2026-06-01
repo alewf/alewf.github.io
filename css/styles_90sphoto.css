@@ -47,18 +47,6 @@ main {
     gap: 20px;
 }
 
-.left-polaroid {
-    position: absolute;
-    left: -250px;
-    top: 100px;
-}
-
-.right-polaroid {
-    position: absolute;
-    right: -250px;
-    top: 250px;
-}
-
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -178,7 +166,7 @@ footer {
     animation-duration: 3s;
 }
 
-.polaroid {
+.leftpolaroid {
     position: absolute;
     float: left;
     width: clamp(50px, 5vw, 250px);
@@ -191,11 +179,41 @@ footer {
     transform: rotate(-8deg);
 }
 
-.polaroid img {
+.leftpolaroid img {
     width: 100%;
 }
 
-.polaroid p {
+.leftpolaroid p {
     text-align: center;
     margin: auto;
 }
+
+.rightpolaroid {
+    position: absolute;
+    float: right;
+    width: clamp(50px, 5vw, 250px);
+    /* width: min(100px, 5vw); */
+    /* width: 180px; */
+    margin: 20px;
+    background: white;
+    padding: 10px 10px 30px;
+    box-shadow: 4px 4px 0 black;
+    transform: rotate(-8deg);
+}
+
+.rightpolaroid img {
+    width: 100%;
+}
+
+.rightpolaroid p {
+    text-align: center;
+    margin: auto;
+}
+
+/*
+.left-polaroid {
+    position: absolute;
+    left: -250px;
+    top: 100px;
+}
+*/
