@@ -120,7 +120,7 @@ footer {
 /* Blink effect */
 .blink {
     animation: blink 2s step-start infinite;
-    color: #fcf228;
+   /* color: #fcf228;  */
 }
 
 @keyframes blink {
