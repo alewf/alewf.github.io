@@ -55,7 +55,8 @@ nav {
 }
 
 nav a {
-    color: #00ffff;
+/*    color: #00ffff; */
+    color: #ff00ff;
     text-decoration: underline;
     margin: 0 10px;
     font-weight: bold;
