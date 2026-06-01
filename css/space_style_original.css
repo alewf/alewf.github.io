@@ -1,0 +1,170 @@
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #050816;
+    color: #d9ecff;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* ---------- STAR BACKGROUND ---------- */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, white 1px, transparent 1px),
+        radial-gradient(circle at 80% 40%, white 1px, transparent 1px),
+        radial-gradient(circle at 40% 70%, white 1px, transparent 1px),
+        radial-gradient(circle at 70% 90%, white 1px, transparent 1px);
+    background-size: 250px 250px;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background:
+        radial-gradient(circle at center,
+        rgba(0, 150, 255, 0.15),
+        transparent 60%);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #8ad8ff;
+    text-shadow:
+        0 0 10px #3ea6ff,
+        0 0 30px #3ea6ff;
+}
+
+.mission-id {
+    color: #7ec8ff;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    color: #b7dfff;
+    font-size: 1.1rem;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+    width: min(900px, 90%);
+    margin: auto;
+    padding-bottom: 4rem;
+}
+
+/* ---------- LOG ENTRIES ---------- */
+
+.log-entry {
+    background: rgba(10, 20, 40, 0.85);
+    border: 1px solid rgba(90, 180, 255, 0.3);
+    border-radius: 14px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(8px);
+    box-shadow:
+        0 0 20px rgba(0, 150, 255, 0.08);
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    color: #74cfff;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(126, 200, 255, 0.2);
+    padding-bottom: 0.75rem;
+}
+
+.log-entry h2 {
+    color: #8fdfff;
+    margin-bottom: 1rem;
+}
+
+.log-entry p {
+    margin-bottom: 1rem;
+}
+
+/* ---------- QUOTE ---------- */
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #3ea6ff;
+    background: rgba(62, 166, 255, 0.08);
+    color: #cfeaff;
+    font-style: italic;
+}
+
+/* ---------- STATUS TAG ---------- */
+
+.status {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #37ff9f;
+    color: #37ff9f;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.status.warning {
+    color: #ffd166;
+    border-color: #ffd166;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1d4d80;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2f6bab;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 700px) {
+    .log-header {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .log-entry {
+        padding: 1.5rem;
+    }
+}
