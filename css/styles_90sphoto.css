@@ -18,14 +18,14 @@ nav {
 }
 
 nav a {
-    color: cyan;
+    color: #ff00ff;
     font-weight: bold;
     margin: 0 10px;
     text-decoration: underline;
 }
 
 nav a:visited {
-    color: magenta;
+    color: #ff00ff;
 }
 
 nav a:hover {
