@@ -134,5 +134,23 @@
 
 </div>
 
+    <script>
+
+const toggle = document.getElementById("themeToggle");
+
+toggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("terminal-mode");
+
+    if(document.body.classList.contains("terminal-mode")){
+        toggle.textContent = "HOLOGRAPHIC MODE";
+    } else {
+        toggle.textContent = "TERMINAL MODE";
+    }
+
+});
+
+</script>
+
 </body>
 </html>
