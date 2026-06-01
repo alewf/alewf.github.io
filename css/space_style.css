@@ -457,7 +457,7 @@ blockquote{
 blockquote {
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
-    border-left: 4px solid #3ea6ff;
+/*    border-left: 4px solid #3ea6ff; */
     background: rgba(62, 166, 255, 0.08);
     color: #cfeaff;
     font-style: italic;
