@@ -45,6 +45,7 @@ main {
     padding: 20px;
 }
 
+/*
 .left-column,
 .right-column {
     width: 45%;
@@ -52,6 +53,7 @@ main {
     flex-direction: column;
     gap: 20px;
 }
+*/
 
 .gallery {
     display: flex;
