@@ -435,6 +435,18 @@ blockquote{
     margin-bottom: 1rem;
 }
 
+/* Blink effect */
+.blink {
+    animation: blink 2s step-start infinite;
+   color: red;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
 /* ---------- QUOTE ---------- */
 
 blockquote {
