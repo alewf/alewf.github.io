@@ -156,7 +156,7 @@ body{
 }
 
 .console-nav a{
-    color:#aeefff;
+    color:var(--text2);
     text-decoration:none;
     display:block;
     padding:10px;
@@ -269,7 +269,7 @@ body{
 
 .telemetry span{
     display:block;
-    color:#7fbdd6;
+    color:var(--text2);
 }
 
 .telemetry strong{
