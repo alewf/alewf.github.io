@@ -476,6 +476,11 @@ blockquote {
     border-color: #ffd166;
 }
 
+.status.danger {
+    color: red;
+    border-color: red;
+}
+
 /* ---------- SCROLLBAR ---------- */
 
 ::-webkit-scrollbar {
