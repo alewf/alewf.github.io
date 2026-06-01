@@ -12,6 +12,8 @@
     --text:#d8f2ff;
     --heading:#8fdfff;
 
+    --text2:#8ad8ff;
+
     --accent:#41bfff;
     --accent-glow:#29c7ff;
 
@@ -28,6 +30,8 @@ body.terminal-mode{
 
     --text:#8cff8c;
     --heading:#7fff7f;
+
+    --text2:#7fff7f;
 
     --accent:#00ff66;
     --accent-glow:#00ff66;
@@ -365,7 +369,7 @@ blockquote{
     font-size: clamp(2.8rem, 6vw, 5rem);
     text-transform: uppercase;
     letter-spacing: 4px;
-    color: #8ad8ff;
+    color: var(--text2);
     text-shadow:
         0 0 10px #3ea6ff,
         0 0 30px #3ea6ff;
