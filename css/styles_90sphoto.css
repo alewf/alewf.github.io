@@ -92,6 +92,8 @@ footer {
 
 .sticker img {
     width: 80px;
+    height: 100%;
+    border: ;
 }
 
 /* Individual positions */
