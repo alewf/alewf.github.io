@@ -203,7 +203,7 @@ footer {
 }
 
 .polaroid2 {
-    bottomm: 50%;
+    bottom: 50%;
     left: 90%;
     transform: rotate(8deg);
     z-index: 5;
