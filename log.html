@@ -1,75 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar Expedition Log</title>
-    <link rel="stylesheet" href="css/space_style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stellar Expedition Log</title>
+<link rel="stylesheet" href="css/space_style.css">
 </head>
 <body>
 
-    <div class="stars"></div>
+<!-- Animated Background -->
+<div class="stars"></div>
 
+<div class="meteor meteor1"></div>
+<div class="meteor meteor2"></div>
+<div class="meteor meteor3"></div>
+
+<!-- Ship Console Navigation -->
+<nav class="console-nav">
+    <h2>SE-2087</h2>
+
+    <ul>
+        <li><a href="#">Mission Overview</a></li>
+        <li><a href="#">Crew Manifest</a></li>
+        <li><a href="#">Telemetry</a></li>
+        <li><a href="#">Star Maps</a></li>
+        <li><a href="#">Log Archive</a></li>
+    </ul>
+
+    <div class="system-status">
+        <p>SYSTEM</p>
+        <span class="online">ONLINE</span>
+    </div>
+</nav>
+
+<div class="main-content">
+
+    <!-- Hero -->
     <header class="hero">
-        <div class="hero-content">
-            <p class="mission-id">MISSION // SE-2087</p>
-            <h1>Stellar Expedition Log</h1>
-            <p class="subtitle">
-                Documenting humanity's journey beyond known space.
-            </p>
-        </div>
+        <p class="mission-id">MISSION // SE-2087</p>
+        <h1>Stellar Expedition Log</h1>
+        <p>Exploring the frontier beyond charted space.</p>
     </header>
 
-    <main class="container">
+    <!-- Dashboard -->
+    <section class="dashboard">
 
-        <article class="log-entry">
-            <div class="log-header">
-                <span>LOG 001</span>
-                <span>March 14, 2087</span>
+        <div class="panel">
+            <h3>Planetary Survey</h3>
+
+            <div class="planet-map">
+                <div class="planet"></div>
+                <div class="orbit"></div>
             </div>
 
-            <h2>Departure from Lunar Gateway</h2>
+            <p>Kepler-186f</p>
+        </div>
 
-            <p>
-                The crew successfully departed Lunar Gateway at 04:12 UTC.
-                Engine diagnostics remain nominal and long-range scanners
-                are operating within expected parameters.
-            </p>
+        <div class="panel">
+            <h3>Mission Telemetry</h3>
 
-            <p>
-                Course has been plotted toward the Kepler-186 system.
-                Estimated transit time remains 7.4 years.
-            </p>
+            <div class="telemetry">
+                <div>
+                    <span>Velocity</span>
+                    <strong>43,892 km/s</strong>
+                </div>
 
-            <div class="status">
-                STATUS: ACTIVE
+                <div>
+                    <span>Fuel</span>
+                    <strong>82%</strong>
+                </div>
+
+                <div>
+                    <span>Hull Integrity</span>
+                    <strong>99.8%</strong>
+                </div>
+
+                <div>
+                    <span>Distance</span>
+                    <strong>317 AU</strong>
+                </div>
             </div>
-        </article>
+        </div>
 
-        <article class="log-entry">
-            <div class="log-header">
-                <span>LOG 002</span>
-                <span>June 02, 2087</span>
-            </div>
+    </section>
 
-            <h2>Unidentified Signal Detected</h2>
+    <!-- Blog Logs -->
 
-            <p>
-                A repeating narrowband transmission was detected from a
-                previously unmapped region near Sector Theta-9.
-            </p>
+    <article class="log-entry">
 
-            <blockquote>
-                "Signal pattern does not correspond to any known
-                natural astronomical source."
-            </blockquote>
+        <div class="terminal-bar">
+            <span>[2087-03-14 04:12 UTC]</span>
+            <span>COORD: X:129.22 Y:88.71 Z:450.12</span>
+        </div>
 
-            <div class="status warning">
-                STATUS: UNDER INVESTIGATION
-            </div>
-        </article>
+        <h2>Departure from Lunar Gateway</h2>
 
-    </main>
+        <p>
+            Primary engines ignited successfully. Navigation systems
+            synchronized with deep-space beacon network.
+        </p>
+
+        <div class="status">ACTIVE</div>
+
+    </article>
+
+    <article class="log-entry">
+
+        <div class="terminal-bar">
+            <span>[2087-06-02 18:44 UTC]</span>
+            <span>COORD: X:144.89 Y:103.17 Z:512.60</span>
+        </div>
+
+        <h2>Unknown Signal Detected</h2>
+
+        <p>
+            Long-range sensors intercepted a repeating narrow-band
+            transmission originating beyond mapped sectors.
+        </p>
+
+        <blockquote>
+            Signal structure appears artificial.
+        </blockquote>
+
+        <div class="status warning">INVESTIGATING</div>
+
+    </article>
+
+</div>
 
 </body>
 </html>
