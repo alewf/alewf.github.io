@@ -334,6 +334,11 @@ blockquote{
     border-color:#ffcf5f;
 }
 
+.danger{
+    color: red;
+    border-color: red;
+}
+
 /* ==========================
    MOBILE
 ========================== */
