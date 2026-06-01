@@ -13,6 +13,7 @@
     --heading:#8fdfff;
 
     --text2:#8ad8ff;
+    --telem:#62f4ff;
 
     --accent:#41bfff;
     --accent-glow:#29c7ff;
@@ -32,6 +33,7 @@ body.terminal-mode{
     --heading:#7fff7f;
 
     --text2:#7fff7f;
+    --telem:white;
 
     --accent:#00ff66;
     --accent-glow:#00ff66;
@@ -271,7 +273,7 @@ body{
 }
 
 .telemetry strong{
-    color:#62f4ff;
+    color:var(--telem);
 }
 
 /* ==========================
