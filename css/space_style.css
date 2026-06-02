@@ -138,7 +138,8 @@ body{
     background:var(--panel2);
     border-right:1px solid var(--border);
     padding:30px;
-    position:sticky;
+    position:fixed;
+    /* position:sticky; */
     top:0;
 }
 
