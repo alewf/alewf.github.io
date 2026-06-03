@@ -262,36 +262,36 @@ window.addEventListener(
 
 /* ---------- ANIMATION ---------- */
 
-function animate(){
+let time = 0;
 
-    requestAnimationFrame(
-        animate
-    );
+function animate() {
 
+    requestAnimationFrame(animate);
+
+    time += 0.002;
+
+    /* Slow dolly motion */
+    const dollyZ = 8 + Math.sin(time) * 2;
+
+    camera.position.z +=
+        (dollyZ - camera.position.z) * 0.02;
+
+    /* Existing mouse parallax */
     camera.position.x +=
-        (mouseX * 3 -
-         camera.position.x)
-         * 0.03;
+        (mouseX * 3 - camera.position.x) * 0.03;
 
     camera.position.y +=
-        (-mouseY * 2 -
-         camera.position.y)
-         * 0.03;
+        (-mouseY * 2 - camera.position.y) * 0.03;
 
-    camera.lookAt(
-        hero.position
-    );
+    camera.lookAt(hero.position);
 
-    hero.rotation.y +=
-        0.0015;
+    /* Gentle hero rotation */
+    hero.rotation.y += 0.0015;
 
-    roomGroup.rotation.y +=
-        0.0002;
+    /* Room movement */
+    roomGroup.rotation.y += 0.0002;
 
-    renderer.render(
-        scene,
-        camera
-    );
+    renderer.render(scene, camera);
 }
 
 animate();
