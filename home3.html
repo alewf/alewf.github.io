@@ -172,7 +172,7 @@ scene.add(reflection);
 /* -----------------------------
    Infinite Room Grid
 ----------------------------- */
-/*
+
 const roomGroup =
     new THREE.Group();
 
@@ -229,13 +229,17 @@ function createGridWall(
         new THREE.BufferGeometry()
         .setFromPoints(points);
 
+    return new THREE.LineSegments(
+        geometry,
+        gridMaterial
+    );
 }
 
 const SIZE = 100;
 const DIV = 4;
-*/
+
 /* Back Wall */
-/*
+
 const backWall =
     createGridWall(
         SIZE,
@@ -245,9 +249,9 @@ const backWall =
 backWall.position.z = -60;
 
 roomGroup.add(backWall);
-*/
+
 /* Floor */
-/*
+
 const floor =
     createGridWall(
         SIZE,
@@ -260,9 +264,9 @@ floor.rotation.x =
 floor.position.y = -20;
 
 roomGroup.add(floor);
-*/
+
 /* Ceiling */
-/*
+
 const ceiling =
     createGridWall(
         SIZE,
@@ -275,9 +279,9 @@ ceiling.rotation.x =
 ceiling.position.y = 20;
 
 roomGroup.add(ceiling);
-*/
+
 /* Left Wall */
-/*
+
 const leftWall =
     createGridWall(
         SIZE,
@@ -290,9 +294,9 @@ leftWall.rotation.y =
 leftWall.position.x = -20;
 
 roomGroup.add(leftWall);
-*/
+
 /* Right Wall */
-/*
+
 const rightWall =
     createGridWall(
         SIZE,
@@ -305,24 +309,6 @@ rightWall.rotation.y =
 rightWall.position.x = 20;
 
 roomGroup.add(rightWall);
-*/
-const room = new THREE.Mesh(
-    new THREE.CapsuleGeometry(
-        35,  // radius
-        60,  // length
-        16,
-        32
-    ),
-    new THREE.MeshBasicMaterial({
-        color: 0xf2f2f2,
-        wireframe: true,
-        side: THREE.BackSide,
-        opacity: 0.2,
-        transparent: true
-    })
-);
-
-scene.add(room);
 /* -----------------------------
    Render Loop
 ----------------------------- */
