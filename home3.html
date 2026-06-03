@@ -306,22 +306,23 @@ rightWall.position.x = 20;
 
 roomGroup.add(rightWall);
 */
-const dome = new THREE.Mesh(
-    new THREE.SphereGeometry(
-        80,
-        64,
-        64
+const room = new THREE.Mesh(
+    new THREE.CapsuleGeometry(
+        35,  // radius
+        60,  // length
+        16,
+        32
     ),
     new THREE.MeshBasicMaterial({
-        color: 0xe8e8e8,
+        color: 0xf2f2f2,
         wireframe: true,
         side: THREE.BackSide,
-        transparent: true,
-        opacity: 0.2
+        opacity: 0.2,
+        transparent: true
     })
 );
 
-scene.add(dome);
+scene.add(room);
 /* -----------------------------
    Render Loop
 ----------------------------- */
