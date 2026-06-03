@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Room Hero</title>
+
+<style>
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+canvas {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+</style>
+</head>
+<body>
+
+<div class="overlay">
+    Explore
+</div>
+
+<script type="module">
+
+import * as THREE from "https://unpkg.com/three@0.165.0/build/three.module.js";
+
+const scene = new THREE.Scene();
+
+scene.fog = new THREE.FogExp2(
+    0x000000,
+    0.015
+);
+
+const camera = new THREE.PerspectiveCamera(
+    60,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+
+camera.position.z = 8;
+
+const renderer = new THREE.WebGLRenderer({
+    antialias: true
+});
+
+renderer.setSize(
+    window.innerWidth,
+    window.innerHeight
+);
+
+document.body.appendChild(
+    renderer.domElement
+);
+
+/* ---------- LIGHTING ---------- */
+
+const ambient =
+    new THREE.AmbientLight(
+        0xffffff,
+        1.5
+    );
+
+scene.add(ambient);
+
+const point =
+    new THREE.PointLight(
+        0xffffff,
+        2
+    );
+
+point.position.set(
+    0,
+    0,
+    5
+);
+
+scene.add(point);
+
+/* ---------- HERO IMAGE ---------- */
+
+const loader =
+    new THREE.TextureLoader();
+
+const heroTexture =
+    loader.load(
+        "hero-image.jpg"
+    );
+
+const heroMaterial =
+    new THREE.MeshBasicMaterial({
+        map: heroTexture
+    });
+
+const hero =
+    new THREE.Mesh(
+        new THREE.PlaneGeometry(
+            4,
+            6
+        ),
+        heroMaterial
+    );
+
+scene.add(hero);
+
+/* ---------- INFINITE ROOM ---------- */
+
+const roomGroup =
+    new THREE.Group();
+
+scene.add(roomGroup);
+
+const gridMaterial =
+    new THREE.LineBasicMaterial({
+        color: 0x444444,
+        transparent: true,
+        opacity: 0.35
+    });
+
+function createGridWall(size, divisions){
+
+    const points = [];
+
+    for(let i=-size;i<=size;i+=divisions){
+
+        points.push(
+            new THREE.Vector3(
+                -size,
+                i,
+                0
+            ),
+            new THREE.Vector3(
+                size,
+                i,
+                0
+            )
+        );
+
+        points.push(
+            new THREE.Vector3(
+                i,
+                -size,
+                0
+            ),
+            new THREE.Vector3(
+                i,
+                size,
+                0
+            )
+        );
+    }
+
+    const geometry =
+        new THREE.BufferGeometry()
+        .setFromPoints(points);
+
+    return new THREE.LineSegments(
+        geometry,
+        gridMaterial
+    );
+}
+
+const SIZE = 100;
+const DIV = 4;
+
+/* back wall */
+
+const backWall =
+    createGridWall(SIZE, DIV);
+
+backWall.position.z = -60;
+
+roomGroup.add(backWall);
+
+/* floor */
+
+const floor =
+    createGridWall(SIZE, DIV);
+
+floor.rotation.x =
+    Math.PI / 2;
+
+floor.position.y = -20;
+
+roomGroup.add(floor);
+
+/* ceiling */
+
+const ceiling =
+    createGridWall(SIZE, DIV);
+
+ceiling.rotation.x =
+    Math.PI / 2;
+
+ceiling.position.y = 20;
+
+roomGroup.add(ceiling);
+
+/* left wall */
+
+const leftWall =
+    createGridWall(SIZE, DIV);
+
+leftWall.rotation.y =
+    Math.PI / 2;
+
+leftWall.position.x = -20;
+
+roomGroup.add(leftWall);
+
+/* right wall */
+
+const rightWall =
+    createGridWall(SIZE, DIV);
+
+rightWall.rotation.y =
+    Math.PI / 2;
+
+rightWall.position.x = 20;
+
+roomGroup.add(rightWall);
+
+/* ---------- MOUSE PARALLAX ---------- */
+
+let mouseX = 0;
+let mouseY = 0;
+
+window.addEventListener(
+    "mousemove",
+    e => {
+
+        mouseX =
+            (e.clientX /
+            window.innerWidth)
+            - 0.5;
+
+        mouseY =
+            (e.clientY /
+            window.innerHeight)
+            - 0.5;
+    }
+);
+
+/* ---------- ANIMATION ---------- */
+
+function animate(){
+
+    requestAnimationFrame(
+        animate
+    );
+
+    camera.position.x +=
+        (mouseX * 3 -
+         camera.position.x)
+         * 0.03;
+
+    camera.position.y +=
+        (-mouseY * 2 -
+         camera.position.y)
+         * 0.03;
+
+    camera.lookAt(
+        hero.position
+    );
+
+    hero.rotation.y +=
+        0.0015;
+
+    roomGroup.rotation.y +=
+        0.0002;
+
+    renderer.render(
+        scene,
+        camera
+    );
+}
+
+animate();
+
+/* ---------- RESIZE ---------- */
+
+window.addEventListener(
+    "resize",
+    ()=>{
+
+        camera.aspect =
+            window.innerWidth /
+            window.innerHeight;
+
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(
+            window.innerWidth,
+            window.innerHeight
+        );
+    }
+);
+
+</script>
+
+</body>
+</html>
