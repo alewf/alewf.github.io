@@ -353,6 +353,196 @@ window.addEventListener(
     }
 );
 
+    /* -----------------------------
+   Linked Gallery Images
+----------------------------- */
+
+const galleryItems = [
+
+{
+    image: "images/LoveLetter.jpg",
+    url: "about.html",
+    x: -10,
+    y: 4,
+    z: -15
+},
+
+{
+    image: "images/LoveLetter.jpg",
+    url: "projects.html",
+    x: 12,
+    y: 2,
+    z: -20
+},
+
+{
+    image: "images/LoveLetter.jpg",
+    url: "archive.html",
+    x: -14,
+    y: -3,
+    z: -25
+},
+
+{
+    image: "images/LoveLetter.jpg",
+    url: "contact.html",
+    x: 8,
+    y: -5,
+    z: -30
+},
+
+{
+    image: "images/LoveLetter.jpg",
+    url: "secret.html",
+    x: 18,
+    y: 5,
+    z: -40
+},
+
+{
+    image: "images/LoveLetter.jpg",
+    url: "gallery.html",
+    x: -20,
+    y: 1,
+    z: -50
+}
+
+];
+
+const clickableFrames = [];
+
+galleryItems.forEach(item => {
+
+    const texture =
+        loader.load(item.image);
+
+    const material =
+        new THREE.MeshBasicMaterial({
+            map: texture
+        });
+
+    const frame =
+        new THREE.Mesh(
+            new THREE.PlaneGeometry(
+                2.5,
+                3.5
+            ),
+            material
+        );
+
+    frame.position.set(
+        item.x,
+        item.y,
+        item.z
+    );
+
+    frame.userData.url =
+        item.url;
+
+    scene.add(frame);
+
+    clickableFrames.push(frame);
+
+});
+
+    /* -----------------------------
+   Clickable Images
+----------------------------- */
+
+const raycaster =
+    new THREE.Raycaster();
+
+const mouse =
+    new THREE.Vector2();
+
+window.addEventListener(
+    "click",
+    (event)=>{
+
+        mouse.x =
+            (event.clientX /
+            window.innerWidth)
+            * 2 - 1;
+
+        mouse.y =
+            -(event.clientY /
+            window.innerHeight)
+            * 2 + 1;
+
+        raycaster.setFromCamera(
+            mouse,
+            camera
+        );
+
+        const intersects =
+            raycaster.intersectObjects(
+                clickableFrames
+            );
+
+        if(intersects.length){
+
+            const hit =
+                intersects[0].object;
+
+            window.location.href =
+                hit.userData.url;
+        }
+
+    }
+);
+
+    /*====HOVER===*/
+
+    window.addEventListener(
+    "mousemove",
+    (event)=>{
+
+        mouse.x =
+            (event.clientX /
+            window.innerWidth)
+            * 2 - 1;
+
+        mouse.y =
+            -(event.clientY /
+            window.innerHeight)
+            * 2 + 1;
+
+        raycaster.setFromCamera(
+            mouse,
+            camera
+        );
+
+        const hits =
+            raycaster.intersectObjects(
+                clickableFrames
+            );
+
+        clickableFrames.forEach(frame=>{
+
+            frame.scale.set(1,1,1);
+
+        });
+
+        if(hits.length){
+
+            hits[0].object.scale.set(
+                1.08,
+                1.08,
+                1.08
+            );
+
+            document.body.style.cursor =
+                "pointer";
+
+        } else {
+
+            document.body.style.cursor =
+                "default";
+        }
+
+    }
+);
+
 </script>
 
 </body>
