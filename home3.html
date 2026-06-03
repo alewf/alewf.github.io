@@ -172,7 +172,7 @@ scene.add(reflection);
 /* -----------------------------
    Infinite Room Grid
 ----------------------------- */
-
+/*
 const roomGroup =
     new THREE.Group();
 
@@ -233,9 +233,9 @@ function createGridWall(
 
 const SIZE = 100;
 const DIV = 4;
-
+*/
 /* Back Wall */
-
+/*
 const backWall =
     createGridWall(
         SIZE,
@@ -245,9 +245,9 @@ const backWall =
 backWall.position.z = -60;
 
 roomGroup.add(backWall);
-
+*/
 /* Floor */
-
+/*
 const floor =
     createGridWall(
         SIZE,
@@ -260,9 +260,9 @@ floor.rotation.x =
 floor.position.y = -20;
 
 roomGroup.add(floor);
-
+*/
 /* Ceiling */
-
+/*
 const ceiling =
     createGridWall(
         SIZE,
@@ -275,9 +275,9 @@ ceiling.rotation.x =
 ceiling.position.y = 20;
 
 roomGroup.add(ceiling);
-
+*/
 /* Left Wall */
-
+/*
 const leftWall =
     createGridWall(
         SIZE,
@@ -290,9 +290,9 @@ leftWall.rotation.y =
 leftWall.position.x = -20;
 
 roomGroup.add(leftWall);
-
+*/
 /* Right Wall */
-
+/*
 const rightWall =
     createGridWall(
         SIZE,
@@ -305,7 +305,31 @@ rightWall.rotation.y =
 rightWall.position.x = 20;
 
 roomGroup.add(rightWall);
+*/
 
+    const curve = new THREE.CatmullRomCurve3([
+    new THREE.Vector3(-20,0,0),
+    new THREE.Vector3(0,5,0),
+    new THREE.Vector3(20,0,0)
+]);
+
+const geometry =
+    new THREE.TubeGeometry(
+        curve,
+        64,
+        0.03,
+        8,
+        false
+    );
+
+const line = new THREE.Mesh(
+    geometry,
+    new THREE.MeshBasicMaterial({
+        color: 0xd0d0d0
+    })
+);
+
+scene.add(line);
 /* -----------------------------
    Render Loop
 ----------------------------- */
