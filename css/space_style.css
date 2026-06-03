@@ -138,8 +138,9 @@ body{
     background:var(--panel2);
     border-right:1px solid var(--border);
     padding:30px;
-    position:absolute;
-    /* position:sticky; */
+    /* Absolute positioning makes it overlap in an awkward way */
+  /*  position:absolute; */
+    position:sticky;
     top:0;
 }
 
