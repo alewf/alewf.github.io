@@ -229,33 +229,6 @@ function createGridWall(
         new THREE.BufferGeometry()
         .setFromPoints(points);
 
-    const roomGeometry = new THREE.CylinderGeometry(
-    40,   // top radius
-    40,   // bottom radius
-    80,   // height
-    64,   // radial segments
-    1,
-    true  // open ended
-);
-
-const wireMaterial = new THREE.MeshBasicMaterial({
-    color: 0xd9d9d9,
-    wireframe: true,
-    transparent: true,
-    opacity: 0.25
-});
-
-const room = new THREE.Mesh(
-    roomGeometry,
-    wireMaterial
-);
-
-scene.add(room);
-    
-    return new THREE.LineSegments(
-        geometry,
-        gridMaterial
-    );
 }
 
 const SIZE = 100;
